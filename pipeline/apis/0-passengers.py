@@ -4,6 +4,7 @@ that can hold a given number of passengers"""
 
 import requests
 
+
 def availableShips(passengerCount):
     """Returns a list of ships that can hold a given number of passengers"""
     api_url = 'https://swapi-api.alx-tools.com/api/starships/?page=1'
@@ -20,7 +21,7 @@ def availableShips(passengerCount):
                     output.append(ship['name'])
             except ValueError:
                 pass
-        
+
         try:
             response = requests.get(res['next'])
         except Exception:
