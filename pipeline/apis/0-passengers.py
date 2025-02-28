@@ -25,5 +25,5 @@ def availableShips(passengerCount):
             response = requests.get(res['next'])
         except Exception:
             break
-    
+
     return output
